@@ -124,7 +124,7 @@ static VALUE encode(VALUE self, VALUE lat, VALUE lon, VALUE precision)
 	
 	Check_Type(lat, T_FLOAT);
 	Check_Type(lon, T_FLOAT);
-	if (digits <3 || digits > 12)
+	if (digits <1 || digits > 12)
 		digits = 12;
 	
 	encode_geohash(RFLOAT_VALUE(lat), RFLOAT_VALUE(lon), digits, str);
